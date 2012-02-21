@@ -1,0 +1,15 @@
+
+GIT_URI="git://people.freedesktop.org/~jturney/xlaunch"
+GIT_BRANCH=xlaunch
+
+inherit autotools git
+
+DIFF_EXCLUDES="xlaunch.hhc"
+
+src_install() {
+        mkdir -p ${D}/usr/share/xlaunch
+        cp setupreg.sh ${D}/usr/share/xlaunch/setupreg.sh
+
+        cd ${B}
+        cyginstall
+}

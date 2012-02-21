@@ -1,0 +1,4 @@
+category: X11
+requires: libxml2 libX11_6 libstdc++6 bash mintty keychain xorg-server
+sdesc: "xlaunch GUI tool for configuring and starting the XWin X server"
+ldesc: "xlaunch GUI tool for configuring and starting the XWin X server"
