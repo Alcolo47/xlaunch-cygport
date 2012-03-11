@@ -1,6 +1,6 @@
 
 GIT_URI="git://people.freedesktop.org/~jturney/xlaunch"
-GIT_BRANCH=xlaunch
+GIT_TAG="xlaunch-${PVR}"
 
 inherit autotools git
 
