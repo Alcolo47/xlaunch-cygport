@@ -8,7 +8,7 @@ DIFF_EXCLUDES="xlaunch.hhc"
 
 src_install() {
         mkdir -p ${D}/usr/share/xlaunch
-        cp setupreg.sh ${D}/usr/share/xlaunch/setupreg.sh
+        cp ${C}/setupreg.sh ${D}/usr/share/xlaunch/setupreg.sh
 
         cd ${B}
         cyginstall
