@@ -6,6 +6,11 @@ inherit autotools git
 
 DIFF_EXCLUDES="xlaunch.hhc"
 
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	echo $GIT_TAG >version
+}
+
 src_install() {
         mkdir -p ${D}/usr/share/xlaunch
         cp ${C}/setupreg.sh ${D}/usr/share/xlaunch/setupreg.sh
