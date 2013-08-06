@@ -1,6 +1,13 @@
+NAME=xlaunch
+VERSION=20130806
+RELEASE=1
+
+CATEGORY="X11"
+xlaunch_SUMMARY="GUI tool for configuring and starting the XWin X server"
+xlaunch_REQUIRES="mintty keychain xorg-server"
 
 GIT_URI="git://people.freedesktop.org/~jturney/xlaunch"
-GIT_TAG="xlaunch-${PVR}"
+GIT_TAG="${NAME}-${PVR}"
 
 inherit autotools git
 
