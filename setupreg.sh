@@ -5,7 +5,7 @@
 # Does writing work correctly for Admin and non-admin users?
 
 # program to invoke
-prog="\"$(cygpath -w $(which run))\""
+prog="\"$(cygpath -w $(which run))\" --quote"
 opencmd="\"$(cygpath -w $(which bash))\" -l -c \"xlaunch -run  \\\"%1\\\"\""
 editcmd="\"$(cygpath -w $(which bash))\" -l -c \"xlaunch -load \\\"%1\\\"\""
 

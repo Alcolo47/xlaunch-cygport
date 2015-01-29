@@ -1,13 +1,13 @@
 NAME=xlaunch
 VERSION=20140605
-RELEASE=1
+RELEASE=2
 
 CATEGORY="X11"
 xlaunch_SUMMARY="GUI tool for configuring and starting the XWin X server"
 xlaunch_REQUIRES="mintty keychain xorg-server"
 
 GIT_URI="git://people.freedesktop.org/~jturney/xlaunch"
-GIT_TAG="${NAME}-${PVR}"
+GIT_TAG="${NAME}-${PV}-1"
 
 inherit autotools git
 
@@ -15,7 +15,7 @@ DIFF_EXCLUDES="xlaunch.hhc"
 
 CYGPORT_USE_UNSTABLE_API=1
 src_unpack_hook() {
-	echo $GIT_TAG >version
+	echo "${NAME}-${PVR}" >version
 }
 
 src_install() {
