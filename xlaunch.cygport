@@ -1,6 +1,6 @@
 NAME=xlaunch
-VERSION=20140605
-RELEASE=2
+VERSION=20150130
+RELEASE=1
 
 CATEGORY="X11"
 xlaunch_SUMMARY="GUI tool for configuring and starting the XWin X server"
@@ -12,6 +12,9 @@ GIT_TAG="${NAME}-${PV}-1"
 inherit autotools git
 
 DIFF_EXCLUDES="xlaunch.hhc"
+
+LDFLAGS="-Wl,--build-id=none"
+export V=1
 
 CYGPORT_USE_UNSTABLE_API=1
 src_unpack_hook() {
