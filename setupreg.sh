@@ -6,8 +6,8 @@
 
 # program to invoke
 prog="\"$(cygpath -w $(which run))\" --quote"
-opencmd="\"$(cygpath -w $(which bash))\" -l -c \"xlaunch -run  \\\"%1\\\"\""
-editcmd="\"$(cygpath -w $(which bash))\" -l -c \"xlaunch -load \\\"%1\\\"\""
+opencmd="\"$(cygpath -w $(which bash))\" '-l -c \"xlaunch -run $(cygpath '%1')\"&'"
+editcmd="\"$(cygpath -w $(which bash))\" '-l -c \"xlaunch -load $(cygpath '%1')\"&'"
 
 # document icon to use
 # (we must set this or we get the run icon, which isn't what we want)
